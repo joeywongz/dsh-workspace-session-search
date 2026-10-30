@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session search",
+    "description": "Search every workspace session from a sidebar panel and inspect the matching multi-turn messages inside each session."
+  }
+}

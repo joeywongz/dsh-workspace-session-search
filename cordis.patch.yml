@@ -1,0 +1,17 @@
+# dsh-workspace-session-search — bundle patch.
+#
+# 1. Enable the root full-text session index that the base/web layers ship
+#    disabled (`openAt: never`). `first-search` defers the node:sqlite import
+#    and the in-memory handle until the panel issues its first query.
+# 2. Insert the host half that exposes the `workspaceSessionSearch` Remote
+#    namespace consumed by the sidebar panel.
+
+- id: session-query-sqlite
+  name: '@deepseek-ai/dsh-session-query-sqlite'
+  config:
+    path: ':memory:'
+    openAt: first-search
+
+- insert:
+    - id: workspace-session-search
+      name: 'dsh-workspace-session-search'

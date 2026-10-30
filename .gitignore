@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Build by-products (vite's intermediate CJS file; wrapped into client.js)
+dist/client.cjs
+
+# OS / editor noise
+.DS_Store
+*.log
+.env
